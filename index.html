@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MasterNext · Administración de empresas Nextpyme</title>
+<style>
+  :root {
+    --fondo: #f6f4fb;
+    --tarjeta: #ffffff;
+    --texto: #3b3551;
+    --suave: #6f6a86;
+    --acento: #5b4a9e;
+    --borde: #e6e1f2;
+    --lavanda: #b9a7f0;
+    --rosa: #f6b6ca;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #17151f;
+      --tarjeta: #201d2b;
+      --texto: #e8e5f2;
+      --suave: #a8a2bd;
+      --acento: #b9a7f0;
+      --borde: #2f2a3d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--fondo);
+    color: var(--texto);
+    font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .portada {
+    max-width: 760px;
+    margin: 0 auto 18px;
+    background: linear-gradient(135deg, var(--lavanda), var(--rosa));
+    border-radius: 24px;
+    padding: 44px 28px;
+    text-align: center;
+    color: #3b3551;
+  }
+  .portada h1 { margin: 0 0 6px; font-size: 2.1rem; }
+  .portada p { margin: 0; color: #5b4a9e; }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    padding: 30px 28px 36px;
+  }
+  h2 { font-size: 1.15rem; margin: 26px 0 10px; color: var(--acento); }
+  h2:first-child { margin-top: 0; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--acento); }
+  footer {
+    max-width: 760px;
+    margin: 22px auto 0;
+    color: var(--suave);
+    font-size: .9rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="portada">
+  <h1>MasterNext</h1>
+  <p>Administración de empresas Nextpyme</p>
+</div>
+<main>
+  <h2>Qué es</h2>
+  <p>MasterNext es una aplicación para Android y Windows con la que se administran las empresas
+  registradas en el servicio de facturación electrónica Nextpyme, desde el celular y sin entrar
+  al portal web.</p>
+
+  <h2>Qué permite hacer</h2>
+  <ul>
+    <li><strong>Reportes y consultas:</strong> datos del software, datos de la empresa, resumen
+    de consumos y vencimiento del certificado digital.</li>
+    <li><strong>Configuraciones:</strong> logotipo, resoluciones, ambiente de facturación
+    (pruebas o producción) y formato del PDF.</li>
+    <li><strong>Resoluciones DIAN:</strong> consulta de los rangos autorizados en la DIAN y de
+    las resoluciones configuradas en la API.</li>
+    <li><strong>Planes y recargas:</strong> asignación de paquetes de documentos, paquetes
+    asignados y folios disponibles.</li>
+  </ul>
+
+  <h2>Dónde quedan los datos</h2>
+  <p>Los datos de las empresas se guardan en el propio dispositivo, en una base de datos local.
+  Si usted lo activa, la aplicación sube una copia de seguridad cifrada a la carpeta
+  «MasterNext» de su cuenta de Google Drive, para no perder la información si pierde el
+  teléfono. Cada copia se cifra con una clave que usted define antes de salir del dispositivo.</p>
+
+  <h2>Privacidad</h2>
+  <p>Consulte la <a href="privacidad.html">Política de Privacidad</a>, donde se explica qué
+  datos maneja la aplicación, qué permiso de Google Drive usa y cómo retirar el acceso.</p>
+
+  <h2>Contacto</h2>
+  <p><a href="mailto:gustavo7218@gmail.com">gustavo7218@gmail.com</a></p>
+</main>
+<footer>MasterNext</footer>
+</body>
+</html>

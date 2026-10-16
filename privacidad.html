@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad · MasterNext</title>
+<style>
+  :root {
+    --fondo: #f6f4fb;
+    --tarjeta: #ffffff;
+    --texto: #3b3551;
+    --suave: #6f6a86;
+    --acento: #5b4a9e;
+    --borde: #e6e1f2;
+    --aviso: #efeafe;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #17151f;
+      --tarjeta: #201d2b;
+      --texto: #e8e5f2;
+      --suave: #a8a2bd;
+      --acento: #b9a7f0;
+      --borde: #2f2a3d;
+      --aviso: #262036;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--fondo);
+    color: var(--texto);
+    font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    padding: 36px 28px 44px;
+  }
+  h1 { font-size: 1.85rem; margin: 0 0 4px; }
+  h2 {
+    font-size: 1.15rem;
+    margin: 34px 0 10px;
+    color: var(--acento);
+  }
+  .fecha { color: var(--suave); font-size: .92rem; margin: 0 0 8px; }
+  p, li { color: var(--texto); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  code {
+    background: var(--aviso);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: .9em;
+    word-break: break-all;
+  }
+  .destacado {
+    background: var(--aviso);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  a { color: var(--acento); }
+  footer {
+    max-width: 760px;
+    margin: 20px auto 0;
+    color: var(--suave);
+    font-size: .88rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Política de Privacidad de MasterNext</h1>
+  <p class="fecha">Última actualización: 15 de octubre de 2026</p>
+
+  <p>MasterNext es una aplicación para Android y Windows que permite administrar empresas
+  registradas en el servicio de facturación electrónica Nextpyme: reportes y consultas,
+  configuraciones, resoluciones DIAN, y planes y recargas de documentos.</p>
+
+  <p>Esta política explica qué datos maneja la aplicación, para qué los usa y qué control
+  tiene usted sobre ellos.</p>
+
+  <h2>1. Responsable</h2>
+  <p>Gustavo Cruz Martínez &middot; <a href="mailto:gustavo7218@gmail.com">gustavo7218@gmail.com</a></p>
+
+  <h2>2. Datos que maneja la aplicación</h2>
+  <p>MasterNext guarda en el propio dispositivo, en una base de datos local:</p>
+  <ul>
+    <li><strong>Usuarios de la aplicación:</strong> nombre, usuario y clave. La clave no se
+    guarda en texto legible: se guarda su huella criptográfica (SHA-256 con sal).</li>
+    <li><strong>Empresas:</strong> razón social, NIT, correo, teléfono, token de Nextpyme e
+    identificador del software (id_soft_fe).</li>
+    <li><strong>Preferencias:</strong> dirección del servicio Nextpyme y ajustes del respaldo.</li>
+  </ul>
+  <p>Estos datos los escribe usted. La aplicación no los envía a ningún servidor del
+  desarrollador. Solo salen del dispositivo en dos casos:</p>
+  <ul>
+    <li>Hacia la API de Nextpyme (<code>api.nextpyme.plus</code>), para ejecutar lo que usted
+    pida en la aplicación.</li>
+    <li>Hacia su propia cuenta de Google Drive, como copia de seguridad cifrada, si usted
+    activa esa función.</li>
+  </ul>
+
+  <h2>3. Acceso a Google Drive</h2>
+  <p>Si usted conecta su cuenta de Google, MasterNext solicita un único permiso:</p>
+  <div class="destacado">
+    <code>https://www.googleapis.com/auth/drive.file</code>
+    <p style="margin:10px 0 0">«Ver, editar, crear y borrar solo los archivos específicos de
+    Google Drive que usas con esta app».</p>
+  </div>
+  <p><strong>Qué alcance tiene:</strong> la aplicación solo puede ver y modificar los archivos
+  que ella misma crea. No puede leer, listar ni modificar ningún otro archivo, carpeta o
+  documento de su Drive.</p>
+  <p><strong>Para qué se usa:</strong></p>
+  <ul>
+    <li>Crear la carpeta «MasterNext» en su unidad de Google Drive.</li>
+    <li>Subir allí las copias de seguridad de la base de datos de la aplicación.</li>
+    <li>Listar, descargar y borrar esas mismas copias (se conservan las 15 más recientes).</li>
+  </ul>
+  <p><strong>Cómo se guardan:</strong> antes de salir del dispositivo, cada copia se cifra con
+  AES-256 usando una clave que usted define y que no se envía a ninguna parte. Ni Google ni el
+  desarrollador pueden leer el contenido de un respaldo sin esa clave.</p>
+  <p><strong>Dónde quedan:</strong> en su propia cuenta de Google Drive. Las copias no se envían
+  a servidores del desarrollador ni a terceros.</p>
+
+  <h2>4. Uso limitado de los datos de Google</h2>
+  <div class="destacado">
+    <p style="margin:0">El uso y la transferencia que MasterNext hace de la información recibida
+    de las APIs de Google se ajusta a la
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank"
+    rel="noopener">Política de Datos de Usuario de los Servicios de las APIs de Google</a>,
+    incluidos sus requisitos de Uso Limitado (<em>Limited Use</em>).</p>
+  </div>
+  <p>En particular, MasterNext:</p>
+  <ul>
+    <li>No usa los datos de Google con fines publicitarios.</li>
+    <li>No vende ni transfiere esos datos a terceros.</li>
+    <li>No permite que personas los lean, salvo con su consentimiento expreso, por motivos de
+    seguridad, para cumplir la ley, o cuando se trate de datos agregados y anonimizados.</li>
+  </ul>
+
+  <h2>5. Credenciales de acceso</h2>
+  <p>El token de autorización de Google (<em>refresh token</em>) se guarda únicamente en el
+  dispositivo, dentro de la base de datos local de la aplicación, y se usa solo para renovar el
+  acceso a su Drive cuando toca hacer una copia de seguridad.</p>
+
+  <h2>6. Cómo retirar el acceso o borrar los datos</h2>
+  <p>En cualquier momento puede:</p>
+  <ul>
+    <li>Entrar a <em>Ajustes &gt; Respaldo en Google Drive &gt; Desconectar Google Drive</em>.
+    La aplicación revoca el permiso ante Google y olvida el token.</li>
+    <li>Revocar el permiso desde su cuenta de Google, en
+    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+    myaccount.google.com/permissions</a>.</li>
+    <li>Borrar las copias de seguridad desde la carpeta «MasterNext» de su Google Drive.</li>
+    <li>Desinstalar la aplicación, lo que elimina del dispositivo la base de datos local.</li>
+  </ul>
+
+  <h2>7. Menores de edad</h2>
+  <p>MasterNext es una herramienta de trabajo dirigida a empresas. No está dirigida a menores
+  de edad ni recoge datos de ellos de forma intencionada.</p>
+
+  <h2>8. Cambios en esta política</h2>
+  <p>Si esta política cambia, la nueva versión se publicará en esta misma dirección, con su
+  fecha de actualización.</p>
+
+  <h2>9. Contacto</h2>
+  <p>Para cualquier duda sobre esta política o sobre el tratamiento de sus datos, escriba a
+  <a href="mailto:gustavo7218@gmail.com">gustavo7218@gmail.com</a>.</p>
+</main>
+<footer>MasterNext</footer>
+</body>
+</html>
